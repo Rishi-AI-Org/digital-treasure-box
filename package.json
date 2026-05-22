@@ -1,0 +1,28 @@
+{
+  "name": "digital-treasure-box",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Private-first personal taste cabinet with up to 21 visible items and a searchable archive.",
+  "workspaces": [
+    "apps/*",
+    "services/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @dtb/web",
+    "build": "npm run build --workspaces --if-present",
+    "check:env": "node scripts/check-env.mjs",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.4"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  }
+}

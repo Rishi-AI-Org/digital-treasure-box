@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "DTB21",
+    "slug": "digital-treasure-box",
+    "scheme": "dtb",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "plugins": ["./plugins/with-share-extension-assets.js"],
+    "ios": {
+      "bundleIdentifier": "app.digitaltreasurebox.mobile",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "app.digitaltreasurebox.mobile",
+      "intentFilters": [
+        {
+          "action": "SEND",
+          "category": ["DEFAULT"],
+          "data": [{ "mimeType": "text/plain" }]
+        },
+        {
+          "action": "VIEW",
+          "category": ["BROWSABLE", "DEFAULT"],
+          "data": [{ "scheme": "dtb" }]
+        }
+      ]
+    }
+  }
+}

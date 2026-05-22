@@ -1,0 +1,17 @@
+name = "digital-treasure-box-worker"
+main = "src/index.ts"
+compatibility_date = "2026-05-22"
+
+[[queues.producers]]
+queue = "capture-jobs"
+binding = "CAPTURE_QUEUE"
+
+[[queues.consumers]]
+queue = "capture-jobs"
+max_batch_size = 10
+max_batch_timeout = 5
+
+[vars]
+CAPTURE_WORKER_TOKEN = "dev-worker-token"
+EMBEDDING_MODEL = "text-embedding-3-small"
+SUPABASE_URL = ""

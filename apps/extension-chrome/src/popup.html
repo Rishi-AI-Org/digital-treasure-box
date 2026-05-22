@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Digital Treasure Box</title>
+    <style>
+      body {
+        width: 320px;
+        margin: 0;
+        padding: 14px;
+        color: #171717;
+        background: #f4f4ee;
+        font-family: system-ui, sans-serif;
+      }
+
+      label {
+        display: grid;
+        gap: 6px;
+        margin-bottom: 10px;
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      input,
+      button {
+        border: 2px solid #171717;
+        padding: 9px;
+        font: inherit;
+      }
+
+      button {
+        width: 100%;
+        margin-top: 8px;
+        color: white;
+        background: #171717;
+        cursor: pointer;
+      }
+
+      #status {
+        min-height: 18px;
+        color: #26624a;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <label>
+      API base URL
+      <input id="apiBaseUrl" placeholder="http://localhost:3000" />
+    </label>
+    <label>
+      Access token
+      <input id="accessToken" type="password" />
+    </label>
+    <button id="saveSettings">Save settings</button>
+    <button id="captureTab">Capture current tab</button>
+    <p id="status"></p>
+    <script type="module" src="./popup.js"></script>
+  </body>
+</html>
+
